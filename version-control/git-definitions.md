@@ -13,3 +13,5 @@ A commit is something you do after you stage a file. Once you have updated a fil
 
 * What is a merge conflict?
 A merge conflict is an issue that happens when your feature branch and the master branch you want to merge with are not in sync. 
+
+Thanks for reviewing my work, Glenna!
