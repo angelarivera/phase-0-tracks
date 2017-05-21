@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feelings</title>
+</head>
+<body>
+	
+<form action="success.html" method="post">
+      <div>
+      <label>How are you feeling?</label>
+      <select name="feeling">
+        <option value="good">Good</option>
+        <option value="silly">Silly</option>
+        <option value="sleepy">Sleepy</option>
+      </select>
+    </div>
+
+      <div>	
+      <label>Explain why you're feeling that way</label>
+      <br>
+      <textarea name="textarea" rows="10" columns="75"> Type in here </textarea>
+      </div>
+
+      <div>    
+      <label>Enter the day you were feeling this way:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <label>Please enter your name (it will remain anonymous)</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+    <label>In the case we fear for your safety, please enter your telephone number</label>
+  	<input type="tel" name="usrtel">
+	</div>
+
+	<button type="submit">Submit to feelings log</button>
+</form>
+</body>
+</html>
