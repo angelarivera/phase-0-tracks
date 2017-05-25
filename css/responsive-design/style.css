@@ -20,9 +20,10 @@ cite {
   vertical-align: text-top;
 }
 
-main {
+body.main {
   width: 150%;
   min-width: 20%;
+  max-width: 100%;
   padding: 10px;
 }
 
@@ -44,5 +45,30 @@ figcaption {
 }
 
 body {
-  max-width: 960px;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: orange;
+  }
+}
+
+@media (max-width: 500px) {
+    p, blockquote, h1, ol {
+        color: green;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    blockquote {
+      font-weight: bolder;
+    }
+}
+
+
+@media (max-width: 500px) {
+    p, blockquote, h1, ol {
+         font-style: italic;
+    }
 }
