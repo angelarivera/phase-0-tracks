@@ -1,0 +1,22 @@
+.cuteoctopus {
+	display: block;
+	margin-top: 6.5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -1;
+}
+
+.heartshapedglasses {
+	margin-left: 650px;
+	margin-top: 280px;
+	left: 8px;
+	display: block;
+	/*z-index: -1*/
+	/*This made the glasses disappear behind the octopus!*/
+}
+
+.cowboyhat {
+	position: absolute;
+	margin-left: 570px;
+}
