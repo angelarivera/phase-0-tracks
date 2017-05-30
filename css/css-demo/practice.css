@@ -1,0 +1,20 @@
+/*Release 2*/
+
+/*
+1. CSS Cascading - Cascading means that in a given stylesheet, more than one rule can be applicable to a piece of HTML, so cascading determines which specific stylesheet rule applies to which piece of HTML. 
+
+The browser decides which rule based on the highest rule that is placed within the stylesheet. However, if there is CSS embedded within the index.html file, that takes precendence. 
+
+2. Pseudo selectors - is used to define a special state of an element. 
+
+selector:pseudo-class {
+    property:value;
+}
+
+3. You can use CSS to select the child element of another element by using child selector. 
+
+id > p {
+    background-color: blue;
+}
+
+*
