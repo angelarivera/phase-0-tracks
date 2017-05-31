@@ -1,0 +1,31 @@
+header {
+	border-style: solid; 
+	border-radius: 15px;
+	padding: 5px;
+	display: inline-block;
+	margin-left: 2	0px;
+}
+
+.column-2 {
+	position: absolute;
+	top:0px;
+	left:500px;
+	width:250px;
+	margin-top: 200px;
+	border-style: solid; 
+	border-radius: 15px;
+}
+
+.column-1 {
+	width: 450px;
+	border-style: solid; 
+	border-radius: 15px;
+	margin-top: 60px;
+}
+
+footer {
+	border-style: solid; 
+	border-radius: 15px;
+	padding: 5px;
+	margin-top: 200px;
+}
