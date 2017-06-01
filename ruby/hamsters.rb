@@ -10,7 +10,7 @@ volume_level = gets.chomp.to_i
 puts "What is the hamster color?"
 hamster_color = gets.chomp
 
-#hamsteradoption
+#hamster adoption
 puts "Is the hamster a good candidate for adoption? (y/n)"
 input=gets.chomp
 while input != "y" && input != "n"
@@ -23,14 +23,7 @@ else
  	 adoption = false	
 end
 
-
-# #hamsteradoption
-# puts "Is the hamster a good candidate for adoption? (y/n)"
-# adoption = gets.chomp
-
-
-
-#hamsterage
+#hamster age
 puts "What is the hamsters estimated age?"
 age = gets.chomp.to_f
 
