@@ -31,7 +31,12 @@ age = gets.chomp.to_f
 if age == ""
 	age = nil
 end
-
+# Print hamsters data to console
+puts "The hamster name is #{hamster_name}."
+puts "The hamster volume level is #{volume_level}."
+puts "The hamster fur color is #{hamster_color}."
+puts "The hamster was a good candidate for adoption: #{adoption}."
+puts "The hamster is estimated to be #{age} young."
 
 
 
