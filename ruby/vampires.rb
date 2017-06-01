@@ -14,6 +14,8 @@ garlic_bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp
 
+age = true
+
 
 # #hamsters name
 # puts "Input name of hamster?"
