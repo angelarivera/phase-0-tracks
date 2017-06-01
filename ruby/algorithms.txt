@@ -1,0 +1,52 @@
+Elevator Algorithm
+
+- Enter the elevator
+- Turn around to face the door
+- Move all the way to the left wall
+- Move foward towards the wall ahead
+- Level your eye vision to the numbers on the wall ahead
+	- Read each floor number 
+	- Count each floor number until you read number 44
+	- Stop counting at 44
+- Raise your right robot arm 
+- Lower your right robot arm to number 44
+- Point your index finger on right hand
+- Push your index finger against the number 44
+- Remove your index finder from the number 44
+- Lower your arm 
+- Move right towards center of elevator
+- Turn to face elevator doors
+- When doors open, move forward to exit
+
+Real-Life Algorithm: Brushing Teeth
+
+- Grab toothbrush with left hand
+- Grab toothpaste with right hand
+- Squeeze toothpaste tube
+- Put emerged toothpaste on top of toothbrush bristles
+- Continue to squeeze toothpaste
+- Move toothpaste across toothbrush bristles
+- Once toothbrush bristles are covered with toothpaste, stop
+- Put toothpaste down
+- Bring toothbrush to mouth level
+- Open your mouth wide
+- Press toothbrush against teeth
+- Until all teeth have been scrubed and fully traversed
+	- Move toothbrush in circles to scrub 
+	- Move toothbrush to the left in a straight line
+	- When the corner of the mouth has been reached, begin circling across your teeth to the right corner of your mouth 
+- Stop brushing
+- Press down right facet
+- Lower toothbursh under water to clean
+- When water stops, put toothbrush down
+- Pick up cup
+- Press down right facet
+- Place cup under water
+- When water stops, raise cup to mouth
+- Open mouth
+- Sip water and rinse mouth
+- Spit out water
+- Put cup down
+- End 
+
+
