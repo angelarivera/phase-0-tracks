@@ -8,7 +8,7 @@ employee_age = gets.chomp.to_i
 
 #Employee year
 puts "What year were you born?"
-employee_year = gets.chomp.to_i
+employee_birth_year = gets.chomp.to_i
 
 # Employee garlic choice
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
@@ -20,122 +20,47 @@ employee_garlic_choice = gets.chomp
 		garlic_choice = false
 	end
 
-#Employee insurance choice
+# Employee insurance choice
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
 employee_insurance_choice = gets.chomp
 
-	if employee_insurance_choice == 
+	if employee_insurance_choice == "y"
+		insurance_choice = true
+	else insurance_choice = false
+	end 
 
+# Set up variables for conditional logic
+# Establish (do I need an invalid age?)
+valid_age = employee_birth_year.time == employee_age
+	else employee_age = false 
+invalid_age = !valid_age
 
+# Establish correct garlic choice
+valid_garlice_choice = employee_insurance_choice == "y"
+invalid_garlic_choice = employee_insurance_choice == "n"
 
+# Establish correct insurance choice
+valid_insurance_choice = employee_insurance_choice == "y" 
+invald_insurance_choice = employee_insurance_choice == "n"
 
-
-
-
-
-
-
-
-
-
-
-
-#Insurance policy 
-puts "Would you like to enroll in the company's health insurance? (y/n)"
-insurance = gets.chomp
 
 # Detection Logic
-#Age detector
-
-
-
-
-case 
-when (employee_name == "Drake Cula") || (employee_name == "Tu Fang")
-	puts "probably a vampire"
-
-
-age && garlic_bread = true
-!age && !garlic_bread = false
-!age && !garlic_bread && !insurance = false
-employee_name == "Drake Cula" || employee_name == "Tu Fang" = false
+result  = case vampire_detector
+when valid_age && valid_garlice_choice || valid_insurance_choice
+	puts "Probably not a vampire"
+when
+	invalid_age && invalid_garlic_choice || valid_insurance_choice
+	puts "Probably a vampire"
+when
+	# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance. Does the fact that there is no "and" that separates the employee age and garlic bread change anything?
+	invalid_age && invalid_garlic_choice && invalid_age
+	puts "Almost certainly a vampire"
+when 
+	employee_name == "Drake Cula" || "Tu Fang"
+	puts "Definitely a vampire"
 else 
-	puts "Results inconclusion"
+	puts "Resutls inconclusive"
+end
 
-puts 
-	"The emplyoee #{employee_name} " is probably not a vampire
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #hamsters name
-# puts "Input name of hamster?"
-# hamster_name = gets.chomp
-
-# #hamsters volume level
-# puts "What is the volume level?"
-# volume_level = gets.chomp.to_i
-
-# #hamsters fur color
-# puts "What is the hamster color?"
-# hamster_color = gets.chomp
-
-# #hamster adoption
-# puts "Is the hamster a good candidate for adoption? (y/n)"
-# input=gets.chomp
-# while input != "y" && input != "n"
-# 	puts "Not valid answer. Is the hamster a good candidate for adoption? (y/n)"
-# 	input=gets.chomp
-# end
-# if input == "y" 
-# 	adoption = true
-# else 
-#  	 adoption = false	
-# end
-
-# #hamster age
-# puts "What is the hamsters estimated age?"
-# age = gets.chomp.to_f
-
-# #if user leave age empty
-# if age == ""
-# 	age = nil
-# end
-# # Print hamsters data to console
-# puts "The hamster name is #{hamster_name}."
-# puts "The hamster volume level is #{volume_level}."
-# puts "The hamster fur color is #{hamster_color}."
-# puts "The hamster was a good candidate for adoption: #{adoption}."
-# puts "The hamster is estimated to be #{age} young."
-
+# Print survey results
+puts "The employee is #{result}."
