@@ -3,18 +3,100 @@ puts "What is your name?"
 employee_name = gets.chomp
 
 # Employee age
-puts "How old are you?  What year were you born?"
-age = gets.chomp.to_i
+puts "How old are you?"
+employee_age = gets.chomp.to_i
 
-# Garlic bread choice
-puts "Our company cafeteria serves garlic bread. Should we order some for you?"
-garlic_bread = gets.chomp
+#Employee year
+puts "What year were you born?"
+employee_year = gets.chomp.to_i
+
+# Employee garlic choice
+puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+employee_garlic_choice = gets.chomp
+
+	if employee_garlic_choice == "y"
+		garlic_choice = true
+	else
+		garlic_choice = false
+	end
+
+#Employee insurance choice
+puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
+employee_insurance_choice = gets.chomp
+
+	if employee_insurance_choice == 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Insurance policy 
-puts "Would you like to enroll in the company's health insurance?"
+puts "Would you like to enroll in the company's health insurance? (y/n)"
 insurance = gets.chomp
 
-age = true
+# Detection Logic
+#Age detector
+
+
+
+
+case 
+when (employee_name == "Drake Cula") || (employee_name == "Tu Fang")
+	puts "probably a vampire"
+
+
+age && garlic_bread = true
+!age && !garlic_bread = false
+!age && !garlic_bread && !insurance = false
+employee_name == "Drake Cula" || employee_name == "Tu Fang" = false
+else 
+	puts "Results inconclusion"
+
+puts 
+	"The emplyoee #{employee_name} " is probably not a vampire
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # #hamsters name
