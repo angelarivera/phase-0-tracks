@@ -35,10 +35,11 @@ while index < number_of_employees
 		else insurance_choice = false
 		end 
 
-	# Employee allergies & while loop
+	# Employee allergies
 	puts "Name any allergies, one at a time. Please type 'done' when you are finished."
 	employee_allergies = gets.chomp
 
+	# While loop for allergies
 	allergy = employee_allergies
 	while allergy != "done"
 		puts "What other allergies do you have?"
@@ -59,6 +60,7 @@ while index < number_of_employees
 	# puts results = "Resutls inconclusive"
 
 	# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+
 	if valid_age && (garlic_choice || insurance_choice)
 		results = "Probably not a vampire"
 	end
@@ -78,7 +80,6 @@ while index < number_of_employees
 	#Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
 	if employee_name == "Drake Cula" || employee_name == "Tu Fang"
 		results = "Definitely a vampire"
-
 	else 
 		puts "Results inconclusive"
 	end
