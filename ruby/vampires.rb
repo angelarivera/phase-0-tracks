@@ -51,7 +51,7 @@ while index < number_of_employees
 	# Set up variables for conditional logic
 	# Establish correct age
 	# *! Do I need an invalid age?
-	current_year = Time.new
+	current_year = Time.new.year
 	valid_age = current_year - employee_birth_year == employee_age
 	invalid_age = !valid_age
 
