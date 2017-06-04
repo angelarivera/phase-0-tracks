@@ -1,3 +1,4 @@
+# Start of Werewolf Inc. survey
 puts "How many employees will be processed?"
 number_of_employees = gets.chomp.to_i
 
@@ -49,16 +50,12 @@ while index < number_of_employees
 		end
 	end
 
-	# Set up variables for conditional logic
-	# Establish correct age
-	# *! Do I need an invalid age?
+	# Establish valid and invalid age
 	current_year = Time.new.year
 	valid_age = current_year - employee_birth_year == employee_age
 	invalid_age = !valid_age
 
 	# Detection Logic
-	# puts results = "Resutls inconclusive"
-
 	# If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
 
 	if valid_age && (garlic_choice || insurance_choice)
@@ -87,10 +84,9 @@ while index < number_of_employees
 	# Print survey results
 	puts results 
 
-	# # Plot twist
-	# if index #is about to finish
-	# 	puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-
+	# End of initial while loop
 	index += 1
+
+	# Plot twist
 	puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
