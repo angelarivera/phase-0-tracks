@@ -60,24 +60,21 @@ while index < number_of_employees
 
 	if valid_age && (garlic_choice || insurance_choice)
 		results = "Probably not a vampire"
-	end
 
 	# If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
-	if
+	elsif		
 		invalid_age && ( !garlic_choice || !insurance_choice)
 		results = "Probably a vampire"
-	end
 
 	# If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
-	if
+	elsif		
 		invalid_age && !garlic_choice && ( !insurance_choice)
 		results = "Almost certainly a vampire"
-	end
 
 	#Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
-	if employee_name == "Drake Cula" || employee_name == "Tu Fang"
+	elsif employee_name == "Drake Cula" || employee_name == "Tu Fang"
 		results = "Definitely a vampire"
-	else 
+	else	 	 
 		puts "Results inconclusive"
 	end
 
