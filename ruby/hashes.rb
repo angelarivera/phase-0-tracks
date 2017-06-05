@@ -1,4 +1,3 @@
-# Pseudocode and write a program that will allow an interior designer to enter the details of a given client: the client's name, age, number of children, decor theme, and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
 # Prompt the designer/user for all of this information.
 # Convert any user input to the appropriate data type.
@@ -8,7 +7,7 @@
 
 
 # Start the Interior Designers survey 
-# Questions for survey
+# Ask survey questions and retrive client data
 puts "What is the client name?"
 client_name = gets.chomp
 
@@ -39,7 +38,7 @@ puts "What is your timeline?"
 client_timeline = gets.chomp
 
 # Create an empty hash (client_information) where all information will be stored
-client_information {}
+client_information = {}
 
 # Save survey data to client_information hash
 client_information["Name"] = client_name
