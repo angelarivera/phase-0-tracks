@@ -14,12 +14,17 @@ closet = {
 		"bomber jacket",
 		"peacoat"
 	],
-	"Shoes" => [
-		"flats",
-		"sneakers",
-		"high heels",
-		"boots"
-	]
+	"Shoes" => {
+		"Active Shoes" => [
+			"sneakers"
+		],
+
+		"Dress Shoes" => [
+			"flats",
+			"high heels",
+			"boots"
+		]
+	}
 }
 
 
@@ -28,9 +33,9 @@ puts "This should print peacoat"
 puts closet["Jackets"][2]
 
 # add variables to nested array 
-puts "This should add sandals to Shoes array"
-closet["Shoes"].push("sandals")
-puts closet["Shoes"][4]
+puts "This should add sandals to Dress Shoes array"
+closet["Shoes"]["Dress Shoes"].push("sandals")
+puts closet["Shoes"]["Dress Shoes"][3]
 
 # change variables to nested array
 puts "This should change longsleeve to Button up"
