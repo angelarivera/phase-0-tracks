@@ -1,13 +1,4 @@
-
-# Prompt the designer/user for all of this information.
-# Convert any user input to the appropriate data type.
-# Print the hash back out to the screen when the designer has answered all of the questions.
-# Give the user the opportunity to update a key (no need to loop, once is fine). After all, sometimes users make mistakes! If the designer says "none", skip it. But if the designer enters "decor_theme" (for example), your program should ask for a new value and update the :decor_theme key. (Hint: Strings have methods that will turn them into symbols, which would be quite handy here.) You can assume the user will correctly input a key that exists in your hash -- no need to handle user errors.
-# Print the latest version of the hash, and exit the program.
-
-
-# Start the Interior Designers survey 
-# Ask survey questions and retrive client data
+# Ask survey questions and retrive/convert client data
 puts "What is the client name?"
 client_name = gets.chomp
 
@@ -34,9 +25,6 @@ client_theme = gets.chomp
 puts "What is your budget?"
 client_budget = gets.chomp.to_i
 
-puts "What is your timeline?"
-client_timeline = gets.chomp
-
 # Create an empty hash (client_information) where all information will be stored
 client_information = {}
 
@@ -50,13 +38,28 @@ client_information["Child Amount"] = children_number_input
 end
 client_information["Decor Theme"] = client_theme
 client_information["Budget"] = client_budget
-client_information["Client Timeline"] = client_timeline
 
-
+# Print the hash back out to the screen when the designer has answered all of the questions.
 p client_information
 
+# Give the user the opportunity to update a key
+puts "Do you want to update any information? (y/n)"
+client_update = gets.chomp 
+	if client_update == "y"
+		client_change = true
+	else 
+		client_change = false
+	end
 
+	if client_change == true
+	puts "What information do you want to update?"
+	change_answer = gets.chomp
+	puts "What change do you want to make"
+	target_changed_value = gets.chomp
+	client_information[change_answer] = target_changed_value
+end 
 
-
+# Print the latest version of the hash, and exit the program.
+p client_information
 
 
