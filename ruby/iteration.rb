@@ -1,111 +1,74 @@
-# # Define a method 
-# def say_hello
-# 	name1 = "Steve"
-# 	name2 = "Tiahna"
-# 	puts "Why hello there!"
-# 	yield(name1, name2)
-# end
-
-# # Say "Great to see you" to someone in particular. Method to populate block parameters. 
-# say_hello { |name1, name2| puts "Great to see you, #{name1} and #{name2}!}" } 
-
-# Notes 
-# 1) blocks & methods: Methods can take a block. Block will not run without yield keyword. 
-# 2) yield: Anywhere you have the yield keyword, your block will run. Yield evaluates the block code.
-# 3) block parameter Value defaults to 0 when it is not set. (S8) 5pm silicon valley bank
-# 4) .each is best for looping through and printing or looping through and adding a number to a sum (array of numbers and them to sum sum), NOT best for modifying an array. 
-# 5) .map is best for modifying an array or hash
-
-# RELEASE 0: Define a method that takes a block
-# def goodnight_greeting
-# 	name1 = "Glenna"
-# 	name2 = "Kit"
-# 	puts "Have a good night,"
-# 	yield(name1, name2)
-# end
-# # Say "Great to see you" to someone in particular. Method to populate block parameters. 
-# goodnight_greeting { |name1, name2| puts "#{name1} and #{name2}!" }
-
-
-# RELEASE 1: .each (Method available on Arrays and Hashes that lets your iterate through those Data Structures and do something with each item, or key value pair in the data structures)
-
-# letters = ["a", "b", "c", "d", "e"]
-# new_letters = []
-
-# puts "Original data:"
-# p letters
-# p new_letters
-
-# # iterate through the array with .each. Modify values in an array with .each
-# letters.each do |letter|
-# 	new_letters << letter.next
-# end
-
-# puts "After .each call:"
-# p letters
-# p new_letters
-
-# ###############
-
-# numbers = {
-# 	1 => 'one',
-# 	2 => 'two',
-# 	3 => 'three'
+# Release 1
+# # Declare an array and a hash
+# hollywood_actors = {
+#   "Ryan Gosling" => "Crazy, Stupid, Love",
+#   "Keira Knightley" => "Pirates of the Caribbean",
+#   "Angelina Jolie" => "Mr and Mrs Smith"
 # }
 
-# # iterate through the hash with .each
+# cities = [
+#   "l.a",
+#   "caribbean",
+#   "colombia"]
 
-# numbers.each do |digit, word|
-# 	puts "#{digit} is spelled out as #{word}"
+# # Demonstrate that you can iterate through each one using .each on hollywood_actors hash
+# p hollywood_actors
+# hollywood_actors.each do |actor, movie|
+#   puts "#{actor} starred in #{movie}."
 # end
+# p hollywood_actors
+# # Iterate through using .map on cities array
+# p cities
+# cities.map! do |movie_sets|
+#   puts "#{cities}!"
+#   movie_sets.capitalize
+# end
+# p cities
 
+# Release 2
 
-
-# .MAP
-letters = ["a", "b", "c", "d", "e"]
-puts "Original data:"
-p letters
-
-
-# iterate through the array with .map (letter is each item in the array. The difference is that map will change the item to whatever the last line of the block you've given map evaluates to. Map doesn't require reassignment?)
-letters.map! do |letter|
-	puts letter
-	letter.next #this last expression is what array is replaced with. 
-end
-
-puts "After .map call:"
-p letters
-
-
-
-# if you didn't want to modify the array, but store the array in a new array, then you use map. 
-
-
-
-
-chicago_neighborhooods = ['Logan Square', 'Pilsen', 'Wicker Park']
-
-neighborhood_needs = {
-	safety level => 12,
-	nightlife level => 10
+ages = {
+	"Brad" => 44,
+	"Ryan" => 99,
+	"Eva"  => 28,
+	"Angelina" => 33
 }
 
+numbers = [
+	1,
+	9,
+	4,
+	7,
+	2
+]
+
+# 1) A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+def delete_odd(ages) 
+	ages.each do |name, age|
+	if age.odd? 
+	 ages.delete(name)
+	end
+	end
+end
+
+puts delete_odd(ages)
+
+# 2) A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5). This method will capitalize any array item that contains the letter "a". 
+
+def delete_even(numbers)
+new_numbers = []
+	numbers.each do |number|
+		if number.even?
+			new_numbers << number
+		end
+	end
+	puts new_numbers
+end
+
+delete_even(numbers)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 3) A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
 
 
 
