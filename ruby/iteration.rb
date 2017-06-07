@@ -1,4 +1,4 @@
-# Release 1
+# # Release 1
 # # Declare an array and a hash
 # hollywood_actors = {
 #   "Ryan Gosling" => "Crazy, Stupid, Love",
@@ -17,11 +17,11 @@
 #   puts "#{actor} starred in #{movie}."
 # end
 # p hollywood_actors
+
 # # Iterate through using .map on cities array
 # p cities
-# cities.map! do |movie_sets|
-#   puts "#{cities}!"
-#   movie_sets.capitalize
+# cities.map! do |city|
+#   city.capitalize
 # end
 # p cities
 
@@ -62,14 +62,7 @@ new_numbers = []
 			new_numbers << number
 		end
 	end
-	puts new_numbers
+	new_numbers
 end
 
-delete_even(numbers)
-
-
-# 3) A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
-
-
-
-
+puts delete_even(numbers)
