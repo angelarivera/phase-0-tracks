@@ -1,27 +1,27 @@
-# Write a program that takes a real name and creates a fake name
-
-# Ask for first name
+# Ask for first name, change input to lowercase letters
 puts "What is your first name?"
-first_name = gets.chomp
+first_name = gets.chomp.downcase
 
-# Ask for last name
+# Ask for last name, change input to lowercase letters
 puts "What is your last name?"
-last_name = gets.chomp
+last_name = gets.chomp.downcase
 
-# add first and last name into string
+# Swap names <----- Is this a concise way to swap? ----->
+full_name = last_name +  "" + first_name
+
+# Select full name, convert the string to an array
+full_name.split("")
+
+# Iterate through the array and change vowels and consonants  
+def name_changer(full_name)
+	vowels = ["a", "e", "i", "o", "u", "y"]
+	consonants = []
+	full_name.map! do |letter|
+		if vowels.include? letter
 
 
-# Select first name, convert the string to lowercase letters
-user_name.downcase 
 
-# Select lower case first name, convert the string to an array
-user_name.split("")
 
-# Put items in array
-full_name = user_name.split
-
-# Iterate through the array 
-def name_changer(user_name)
 	vowels = ["a", "e", "i", "o", "u", "y"]
 	user_name.each  do |letter|
 		if vowels.include letter
