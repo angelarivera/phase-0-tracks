@@ -2,7 +2,7 @@
 puts "What is your first name?"
 first_name = gets.chomp.downcase
 
-while first_name != "done"
+until first_name == "quit" 
 
 # Ask for last name, change input to lowercase letters
 puts "What is your last name?"
