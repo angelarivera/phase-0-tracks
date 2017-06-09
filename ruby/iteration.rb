@@ -1,29 +1,29 @@
-# # Release 1
-# # Declare an array and a hash
-# hollywood_actors = {
-#   "Ryan Gosling" => "Crazy, Stupid, Love",
-#   "Keira Knightley" => "Pirates of the Caribbean",
-#   "Angelina Jolie" => "Mr and Mrs Smith"
-# }
+# Release 1
+# Declare an array and a hash
+hollywood_actors = {
+  "Ryan Gosling" => "Crazy, Stupid, Love",
+  "Keira Knightley" => "Pirates of the Caribbean",
+  "Angelina Jolie" => "Mr and Mrs Smith"
+}
 
-# cities = [
-#   "l.a",
-#   "caribbean",
-#   "colombia"]
+cities = [
+  "l.a",
+  "caribbean",
+  "colombia"]
 
-# # Demonstrate that you can iterate through each one using .each on hollywood_actors hash
-# p hollywood_actors
-# hollywood_actors.each do |actor, movie|
-#   puts "#{actor} starred in #{movie}."
-# end
-# p hollywood_actors
+#  Demonstrate that you can iterate through each one using .each on hollywood_actors hash
+p hollywood_actors
+hollywood_actors.each do |actor, movie|
+  puts "#{actor} starred in #{movie}."
+end
+p hollywood_actors
 
-# # Iterate through using .map on cities array
-# p cities
-# cities.map! do |city|
-#   city.capitalize
-# end
-# p cities
+# Iterate through using .map on cities array
+p cities
+cities.map! do |city|
+  city.capitalize
+end
+p cities
 
 # Release 2
 
@@ -42,7 +42,8 @@ numbers = [
 	2
 ]
 
-# 1) A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
+# Method for hash
+
 def delete_odd(ages) 
 	ages.each do |name, age|
 	if age.odd? 
@@ -53,7 +54,7 @@ end
 
 puts delete_odd(ages)
 
-# 2) A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5). This method will capitalize any array item that contains the letter "a". 
+# Method for array
 
 def delete_even(numbers)
 new_numbers = []
