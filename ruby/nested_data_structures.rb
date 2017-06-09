@@ -1,3 +1,5 @@
+# Release Two: Design and Build Nested Data
+
 # Create closet hash and nested arrays of clothing
 closet = {
 	"Dresses" => [
