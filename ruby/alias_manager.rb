@@ -25,12 +25,17 @@ def name_changer(username)
 	stored_names.join(" ")
 end 
 
-#  saved_data = {"realname", "fakename"}
+# saved_data = {}
+# saved_data["RealName"] = full_name
+# saved_data["Alias"] = fakename
 # # putting new names into saved data
 # # saving old names in the 
 # # print hash 
 
 loop do 
+	saved_data = {}
+	saved_data["RealName"] = full_name
+	saved_data["Alias"] = fakename
 	# Ask for first name, change input to lowercase letters
 	puts "What is your first name?"
 	first_name = gets.chomp.downcase
@@ -48,10 +53,11 @@ loop do
 	username = full_name.split("")
 	puts username
 	# Iterate through the array and change vowels and consonants  
-	puts name_changer(username)
+	fakename = name_changer(username)
 
 	if first_name == "quit"
-		puts "#{"realname"} is actualy #{"fakename"}"
+		puts "saved_data[:fakename] is actually saved_data[:full_name]."
+	end
 end
 
 
