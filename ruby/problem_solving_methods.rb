@@ -25,13 +25,14 @@ p array_search(array,4)
 def fib_sequence(x)
   array = [0,1]
   index = 0
-  #some loop
+  # some loop
     while index < x
       new_number = array[index] + array[index + 1]
       index += 1
+      # pushes items into array
       array << new_number
     end
-     return array #maybe put inside while loop
+     return array 
 end
 p fib_sequence(6)
 
@@ -48,6 +49,7 @@ p fib_sequence(6)
 
 #RELEASE 2
 
+#Define bubble sort method that takes in an argument of an array. 
 def bubble_sort(arr)
  n = arr.length
 
@@ -56,10 +58,12 @@ def bubble_sort(arr)
 
   (n-1).times do |index| 
    if arr[index] > arr[index + 1]
+    # Swap the numbers!
      arr[index], arr[index + 1] = arr[index + 1], arr[index]
      swapped = true
    end
    end 
+   # terminates the program if there is no more sorting
    break if not swapped
  end
    arr
