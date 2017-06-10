@@ -3,16 +3,18 @@ def name_changer(username)
 	consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "y", "z"]
 	stored_names = []
 	username.each do |letter|
-	 	# If there is a vowel in the array, replace the letter with the preceding vowel listed
-		if vowels.include? letter
-			letter = vowels[vowels.index(letter) +1]
+	 	# If there is a vowel in the array, replace the letter with the preceding vowel liste
+		if vowels.include? letter 
+			letter = vowels[vowels.index(letter) + 1]
 			stored_names << letter
-			if letter == "u"
-				letter = "a"
+			# comparing vowels index to get a number
+			if vowels.index(letter) == vowels.length - 1
+				index = vowels.index(letter) + 1 % vowels.length # index
+				stored_names << vowels[index]
 			end
 		elsif consonants.include? letter 
 	 		# If there is a consonant in the array, replace the letter with the preceding vowel listed
-			letter = consonants[consonants.index(letter) +1]
+			letter = consonants[consonants.index(letter) + 1]
 			stored_names << letter
 			if letter == "z"
 				letter = "b"
@@ -22,20 +24,12 @@ def name_changer(username)
 		end
 	end 
 	# research .join storedname convert an array to a string 
-	stored_names.join(" ")
+	stored_names.join("")
 end 
 
-# saved_data = {}
-# saved_data["RealName"] = full_name
-# saved_data["Alias"] = fakename
-# # putting new names into saved data
-# # saving old names in the 
-# # print hash 
+saved_data = {}
 
 loop do 
-	saved_data = {}
-	saved_data["RealName"] = full_name
-	saved_data["Alias"] = fakename
 	# Ask for first name, change input to lowercase letters
 	puts "What is your first name?"
 	first_name = gets.chomp.downcase
@@ -51,16 +45,25 @@ loop do
 
 	#  Select full name, convert the string to an array <------- Why is the array displayed vertically? ------->
 	username = full_name.split("")
-	puts username
+
 	# Iterate through the array and change vowels and consonants  
 	fakename = name_changer(username)
 
-	if first_name == "quit"
-		puts "saved_data[:fakename] is actually saved_data[:full_name]."
-	end
+	saved_data[full_name] = fakename
 end
 
+p saved_data
+
+saved_data.each do |full_name, fakename|
+		puts "#{full_name} is actually #{fakename}"
+	end
 
 
 
+
+
+
+
+	# How to access data in a hash. Iterate. What does it mean to iterate and why and how it is relevant. .Each 
+	# puts saved_data  "#{full_name} is actually #{fakename}"
 
