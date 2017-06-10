@@ -1,6 +1,6 @@
 def name_changer(username)
 	vowels = ["a", "e", "i", "o", "u"]
-	consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "y", "z"]
+	consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 	stored_names = []
 	username.each do |letter|
 	 	# If there is a vowel in the array, replace the letter with the preceding vowel liste
@@ -16,8 +16,10 @@ def name_changer(username)
 	 		# If there is a consonant in the array, replace the letter with the preceding vowel listed
 			letter = consonants[consonants.index(letter) + 1]
 			stored_names << letter
-			if letter == "z"
-				letter = "b"
+			# comparing vowels index to get a number
+			if consonants.index(letter) == consonants.length - 1
+				index = consonants.index(letter) + 1 % consonants.length # index
+				stored_names << consonants[index]
 			end
 		elsif letter == " "
 				stored_names << letter
@@ -51,8 +53,6 @@ loop do
 
 	saved_data[full_name] = fakename
 end
-
-p saved_data
 
 saved_data.each do |full_name, fakename|
 		puts "#{full_name} is actually #{fakename}"
