@@ -5,12 +5,16 @@ def name_changer(username)
 	username.each do |letter|
 	 	# If there is a vowel in the array, replace the letter with the preceding vowel liste
 		if vowels.include? letter 
-			letter = vowels[vowels.index(letter) + 1]
-			stored_names << letter
 			# comparing vowels index to get a number
-			if vowels.index(letter) == vowels.length - 1
-				index = vowels.index(letter) + 1 % vowels.length # index
-				stored_names << vowels[index]
+			# if vowels.index(letter) == vowels.length - 1 
+			if letter == vowels[vowels.length - 1]
+			 # if the index of letter in the vowels array is equal to the last index (last index is equal to length of array minus one).
+				index = 0 
+				#(vowels.index(letter) + 1) % vowels.length # index. if its the last element in the array, we want to go back to the first elemnet in the array (which is 0 -> a)
+				stored_names << vowels[index] # a 
+			else 
+				letter = vowels[vowels.index(letter) + 1]
+				stored_names << letter
 			end
 		elsif consonants.include? letter 
 	 		# If there is a consonant in the array, replace the letter with the preceding vowel listed
@@ -54,16 +58,11 @@ loop do
 	saved_data[full_name] = fakename
 end
 
+# Access data in the hash & iterate
 saved_data.each do |full_name, fakename|
 		puts "#{full_name} is actually #{fakename}"
 	end
 
 
 
-
-
-
-
-	# How to access data in a hash. Iterate. What does it mean to iterate and why and how it is relevant. .Each 
-	# puts saved_data  "#{full_name} is actually #{fakename}"
 
