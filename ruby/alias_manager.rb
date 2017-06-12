@@ -1,79 +1,70 @@
-# Write a program that takes a real name and creates a fake name
+def name_changer(username)
+	vowels = ["a", "e", "i", "o", "u"]
+	consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+	stored_names = []
+	username.each do |letter|
+	 	# If there is a vowel in the array, replace the letter with the preceding vowel liste
+		if vowels.include? letter 
+			# comparing vowels index to get a number
+			# if vowels.index(letter) == vowels.length - 1 
+			if letter == vowels[vowels.length - 1]
+			 # if the index of letter in the vowels array is equal to the last index (last index is equal to length of array minus one). Always needs to be set to 0. 
+				index = 0 
+				#if its the last element in the array, we want to go back to the first elemnet in the array (which is 0 -> a)
+				stored_names << vowels[index] # a 
+			else 
+				letter = vowels[vowels.index(letter) + 1]
+				stored_names << letter
+			end
+		elsif consonants.include? letter 
+	 		# If there is a consonant in the array, replace the letter with the preceding vowel listed
+	 		if letter == consonants[consonants.length - 1]
+	 			index = 0 
+	 			stored_names << consonants[index]
 
-# Ask for first name
-puts "What is your first name?"
-first_name = gets.chomp
-
-# Ask for last name
-puts "What is your last name?"
-last_name = gets.chomp
-
-# add first and last name into string
-
-
-# Select first name, convert the string to lowercase letters
-user_name.downcase 
-
-# Select lower case first name, convert the string to an array
-user_name.split("")
-
-# Put items in array
-full_name = user_name.split
-
-# Iterate through the array 
-def name_changer(user_name)
-	vowels = ["a", "e", "i", "o", "u", "y"]
-	user_name.each  do |letter|
-		if vowels.include letter
-		index[letter] == .next
-
-
-	# consonants
-
-
-end  
-
-# for each letter in the name
-# see if its a vowel
-# if it is then what is the index of the vowel
-# and set that vowel to the following +1 item index 
-# if the letter in the full namer variable is "u" 
-# then program the computer to automatically go to the letter a 
-# return value will be changed name (with vowels changed)
-# set that return value to a new variable 
+	 		else 
+	 			letter = consonants[consonants.index(letter) + 1 ]
+	 			stored_names << letter
+			end
+		elsif letter == " "
+				stored_names << letter
+		end
+	end 
+	# research .join storedname convert an array to a string 
+	stored_names.join("")
+end 
 
 
-# def consonantchanger (full name)
-# get result from new name from vowel changer
-# consants = [b,c,f,l]
-# return value will be changed name 
+saved_data = {}
 
-# new first name
+loop do 
+	# Ask for first name, change input to lowercase letters
+	puts "What is your first name?"
+	first_name = gets.chomp.downcase
+
+	# Ask for last name, change input to lowercase letters
+	break if first_name == "quit" 
+
+	puts "What is your last name?"
+	last_name = gets.chomp.downcase
+
+	# Swap names
+	full_name = last_name +  " " + first_name
+
+	#  Select full name, convert the string to an array <------- Why is the array displayed vertically? ------->
+	username = full_name.split("")
+
+	# Iterate through the array and change vowels and consonants  
+	fakename = name_changer(username)
+
+	saved_data[full_name] = fakename
+end
+
+# Access data in the hash & iterate
+saved_data.each do |full_name, fakename|
+		puts "#{full_name} is actually #{fakename}"
+	end
 
 
-#    If an item in the first name array has the letters "a,e,i,o, u" take the index that vowel is in and change it to the following vowel. (Example: a -> e) 
-#    Create an alphabet variable that has "a-z" to reference.
-#    If an item in the first name array has a consonant take the index of that consonant and change it to the letter that follows it in the alphabet
-# Place both of these changes in an empty array (.map)? Or .map!?
 
 
-
-
-
-
-
-
-
-
-
-
-# Select last name, convert the string to lowercase letters
-# Select lower case last name, convert the string to an array
-
-# Iterate through the array, 
-#    If an item in the last name array has the letters "a,e,i,o, u" take the index that vowel is in and change it to the following vowel. (Example: a -> e) 
-#    Create an alphabet variable that has "a-z" to reference.
-#    If an item in the last name array has a consonant take the index of that consonant and change it to the letter that follows it in the alphabet
-# Place both of these changes in an empty array (.map)? Or .map!?
-
-# one method per step, insdie that method you can be focused on that one thing you have to do! 
