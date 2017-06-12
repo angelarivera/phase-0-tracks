@@ -8,9 +8,9 @@ def name_changer(username)
 			# comparing vowels index to get a number
 			# if vowels.index(letter) == vowels.length - 1 
 			if letter == vowels[vowels.length - 1]
-			 # if the index of letter in the vowels array is equal to the last index (last index is equal to length of array minus one).
+			 # if the index of letter in the vowels array is equal to the last index (last index is equal to length of array minus one). Always needs to be set to 0. 
 				index = 0 
-				#(vowels.index(letter) + 1) % vowels.length # index. if its the last element in the array, we want to go back to the first elemnet in the array (which is 0 -> a)
+				#if its the last element in the array, we want to go back to the first elemnet in the array (which is 0 -> a)
 				stored_names << vowels[index] # a 
 			else 
 				letter = vowels[vowels.index(letter) + 1]
@@ -18,12 +18,13 @@ def name_changer(username)
 			end
 		elsif consonants.include? letter 
 	 		# If there is a consonant in the array, replace the letter with the preceding vowel listed
-			letter = consonants[consonants.index(letter) + 1]
-			stored_names << letter
-			# comparing vowels index to get a number
-			if consonants.index(letter) == consonants.length - 1
-				index = consonants.index(letter) + 1 % consonants.length # index
-				stored_names << consonants[index]
+	 		if letter == consonants[consonants.length - 1]
+	 			index = 0 
+	 			stored_names << consonants[index]
+
+	 		else 
+	 			letter = consonants[consonants.index(letter) + 1 ]
+	 			stored_names << letter
 			end
 		elsif letter == " "
 				stored_names << letter
@@ -32,6 +33,7 @@ def name_changer(username)
 	# research .join storedname convert an array to a string 
 	stored_names.join("")
 end 
+
 
 saved_data = {}
 
