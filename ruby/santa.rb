@@ -1,6 +1,11 @@
 # R E L E A S E   Z E R O 
 
 class Santa 
+
+	# R E L E A S E   T H R E E 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	def initialize (gender, ethnicity)
 		# Can't have a Santa with no gender or ethnicty.
 		# The following are instance variables.
@@ -8,7 +13,7 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0 
+		@age = rand(0...140)
 	end
 
 	def speak
@@ -18,7 +23,23 @@ class Santa
 	def eat_milk_and_cookies (cookietype)
 		puts "That was a good #{cookietype}!"
 	end
+
+	# Add three attribute-changing methods to your Santa class:
+
+	def celebrate_birthday (age)
+		age + 1 
+	end
+
+	def get_mad_at (reindeer_name)
+		# get index number of given name
+		reindeer_ranking[reindeer_name]
+		# delete the reindeer that was in that given index number
+		reindeer_ranking.delete(reindeer_name)
+		# re-add reindeer you deleted back at to the array
+		reindeer_ranking << reindeer_name
+	end
 end 
+
 
 
 
@@ -39,10 +60,22 @@ gender_options.length.times do |index|
 end
 
 
+santa_con = []
 
+# R E L E A S E   F O U R 
 
-# R E L E A S E   T W O 
+# Create 100 Santas
+# Use array of example_genders, example_ethnicities to create your santas with a randomly selected gender and a random selected ethnicity. 
+# Set your new Santa's age to a random number between 0 and 140. 
+# Program should print out the attributes of each Santa using the instance methods that give you access to that data.
+# "For a 100 times, I'm going to create a santa with a random gender and ethnicity, and store it inside of an array, and display that array."
 
+# Santa.new(gender, ethnicity) 
+
+100.times { santa_con << Santa.new(gender_options.sample, ethnicity_options.sample) }
+p santa_con
+
+p santa_con.length
 
 
 
