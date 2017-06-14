@@ -4,7 +4,18 @@ class Santa
 
 	# R E L E A S E   T H R E E 
 	attr_reader :age, :ethnicity
+	# def
+	# 	@age
+	# end
+
+	# def
+	# 	@ethnicity 
+	# end
+
 	attr_accessor :gender
+	# def ethnicity= (new_ethnicity)
+	# 	@ethnicity = new_ethnicity
+	# end
 
 	def initialize (gender, ethnicity)
 		# Can't have a Santa with no gender or ethnicty.
@@ -75,6 +86,7 @@ santa_con = []
 100.times { santa_con << Santa.new(gender_options.sample, ethnicity_options.sample) }
 p santa_con
 
+# To check if all 100 santas were printed
 p santa_con.length
 
 
