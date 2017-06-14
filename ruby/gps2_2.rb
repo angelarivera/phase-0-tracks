@@ -97,6 +97,20 @@ print new_list
 
 print_list(new_list)
 
+# What did you learn about pseudocode from working on this challenge?
+# I learned that pseudocode is instrumental in clean, concise code! It definitely helped my awesome pair (Gloria) and I move through creating methods with ease and precision. 
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# The trade off of using arrays and hashes is just being diligent about tracking names/key/value pairs. There are also minor details in syntax that are important when using those types of data structures in this challenge. 
+
+# What does a method return?
+# A method returns an output of whatever the block of code creates. For example, our update_quantity method returns a grocery list with the updated value. 
+
+# What kind of things can you pass into methods as arguments?
+# You can name arguments anything that makes sense to you. When you run methods you can take in strings, integers, etc.  
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# The concepts that were solidified were iterating through data structures. The concepts that I would say is still slightly ambiguous to me is accessing indexes. 
 
 
 
