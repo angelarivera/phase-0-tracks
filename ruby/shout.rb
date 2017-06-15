@@ -2,19 +2,21 @@
 
 
 # Declaring a module
-# module Shout
-# 	def self.yell_angrily(words)
-# 		words + "!!!" + " :("
-# 	end
+module Shout
+	def self.yell_angrily(words)
+		words + "!!!" + " :("
+	end
 
-# 	def self.yelling_happily(words)
-# 		words + "!!!" + " : )"
-# 	end
-# end
+	def self.yelling_happily(words)
+		words + "!!!" + " :)"
+	end
+end
 
-# # Calling a module method
-# p Shout
+# Calling a module method
+p Shout.yell_angrily("I don't get it")
+p Shout.yelling_happily("I get it")
 
+-------------------------------------------------------------------------------
 
 module Shout
 	def yell_angrily(words)
