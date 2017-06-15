@@ -13,7 +13,7 @@ end
 p Shout.yell_angrily("I don't get it")
 p Shout.yelling_happily("I get it")
 
--------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
 module Shout
 	def yell_angrily(words)
