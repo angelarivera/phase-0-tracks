@@ -12,7 +12,7 @@ class Plane
 	include Flight
 end
 
-bird = Bird.new≈
+bird = Bird.new
 bird.take_off(800)
 
 plane = Plane.new
