@@ -1,51 +1,61 @@
-# R E L E A S E   Z E R O 
+# # R E L E A S E   Z E R O 
 
-class Puppy
+# class Puppy
 
-	def fetch(toy)
-		puts "I brought back the #{toy}!"
-		toy
-	end
+# 	def fetch(toy)
+# 		puts "I brought back the #{toy}!"
+# 		toy
+# 	end
 
-# Add a speak method that takes an integer, and then prints "Woof!" that many times
-	def speak(integer)
-		"Woof!" * integer
-	end
+# # Add a speak method that takes an integer, and then prints "Woof!" that many times
+# 	def speak(integer)
+# 		puts "Woof!" * integer
+# 	end
 
-# Add a roll_over method that just prints "*rolls over*".
-	def roll_over
-		puts "*rolls over*"
-	end
+# # Add a roll_over method that just prints "*rolls over*".
+# 	def roll_over
+# 		puts "*rolls over*"
+# 	end
 
-# Add a dog_years method that takes an integer (of human years) and converts that number to dog years, returning a new integer.
-# 7 human years is equivalent to 1 dog year
-	def dog_years (age)
-		age * 7
-	end 
+# # Add a dog_years method that takes an integer (of human years) and converts that number to dog years, returning a new integer.
+# # 7 human years is equivalent to 1 dog year
+# 	def dog_years (age)
+# 		puts age / 7
+# 	end 
 
-# Add another method of your choice
-	def high_five
-		puts "*raises paw*"
-	end
+# # Add another method of your choice
+# 	def high_five
+# 		puts "*raises paw*"
+# 	end
 
-# R E L E A S E   O N E  
+# # R E L E A S E   O N E  
 
-# Add a method to your Puppy class named initialize. It should print "Initializing new puppy instance ..."
-	def intialize 
-		puts "Initializing new puppy instance . . ."
-	end
+# # Add a method to your Puppy class named initialize. It should print "Initializing new puppy instance ..."
+# 	def intialize 
+# 		puts "Initializing new puppy instance . . ."
+# 	end
 
-end
+# end
 
-# # D R I V E R   C O D E 
+# # # D R I V E R   C O D E 
 
-# Initialize an instance of a puppy
-hendrix = Puppy.new
+# # Initialize an instance of a puppy
+# hendrix = Puppy.new
 
-# Verify instance can fetch ball
-hendrix.fetch 
+# # Verify instance can fetch ball
+# hendrix.fetch("ball") 
 
-# Update your driver code to demonstrate that methods work
+# # Verify speak method
+# hendrix.speak(10)
+
+# # Verify roll over
+# hendrix.roll_over
+
+# # Verify high five
+# hendrix.high_five
+
+# # Verify dog_years method
+# hendrix.dog_years(26)
 
 
 # Release Two
@@ -67,6 +77,10 @@ class BasketballPlayer
 	end
 end 
 
+# Design and implement your own class below the Puppy class
+# Use a loop to make 50 instances of your class.
+# Modify your loop so that it stores all of the instances in a data structure.
+# Iterate over that data structure & Call the instance methods you wrote on each instance
 
 roster = []
 
@@ -83,6 +97,7 @@ roster.each do |player|
 	player.shoot
 	player.cheer("Steph Curry")
 end
+
 
 
 
