@@ -1,11 +1,14 @@
-# # Declaring a module
+# Difference between mixin and reg module....stand alone module is interchangeable.
+
+
+# Declaring a module
 # module Shout
 # 	def self.yell_angrily(words)
 # 		words + "!!!" + " :("
 # 	end
 
 # 	def self.yelling_happily(words)
-# 		words + "!!!" + " : )""
+# 		words + "!!!" + " : )"
 # 	end
 # end
 
