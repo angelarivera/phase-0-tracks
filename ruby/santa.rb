@@ -62,42 +62,42 @@ puts newsanta.ethnicity
 
 
 
-# # R E L E A S E   O N E 
+# R E L E A S E   O N E 
 
-# # Declaring an empty array to store diverse santas
-# santas = []
+# Declaring an empty array to store diverse santas
+santas = []
 
-# # Setting example_genders array for loop to reference
-# gender_options = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# Setting example_genders array for loop to reference
+gender_options = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 
-# # Setting example_ethnicities array for loop to reference
-# ethnicity_options = ["African American", "Latinx", "Caucasian", "Asian", "Native American", "prefer not to say"]
+# Setting example_ethnicities array for loop to reference
+ethnicity_options = ["African American", "Latinx", "Caucasian", "Asian", "Native American", "prefer not to say"]
 
-# # creating a do loop to iterate through the array and initialize diverse santas into the empty Santas array. <---- Don't understand index
-# gender_options.length.times do |index|
-# 	santas << Santa.new(gender_options[index], ethnicity_options[index])
-# end
+# creating a do loop to iterate through the array and initialize diverse santas into the empty Santas array. <---- Don't understand index
+gender_options.length.times do |index|
+	santas << Santa.new(gender_options[index], ethnicity_options[index])
+end
 
-# p santas
+p santas
 
 
-# santa_con = []
+# R E L E A S E   F O U R 
 
-# # R E L E A S E   F O U R 
+# Create 100 Santas
+# Use array of example_genders, example_ethnicities to create your santas with a randomly selected gender and a random selected ethnicity. 
+# Set your new Santa's age to a random number between 0 and 140. 
+# Program should print out the attributes of each Santa using the instance methods that give you access to that data.
+# "For a 100 times, I'm going to create a santa with a random gender and ethnicity, and store it inside of an array, and display that array."
 
-# # Create 100 Santas
-# # Use array of example_genders, example_ethnicities to create your santas with a randomly selected gender and a random selected ethnicity. 
-# # Set your new Santa's age to a random number between 0 and 140. 
-# # Program should print out the attributes of each Santa using the instance methods that give you access to that data.
-# # "For a 100 times, I'm going to create a santa with a random gender and ethnicity, and store it inside of an array, and display that array."
+# Santa.new(gender, ethnicity) 
 
-# # Santa.new(gender, ethnicity) 
+santa_con = []
 
-# 100.times { santa_con << Santa.new(gender_options.sample, ethnicity_options.sample) }
-# p santa_con
+100.times { santa_con << Santa.new(gender_options.sample, ethnicity_options.sample) }
+p santa_con
 
-# # To check if all 100 santas were printed
-# p santa_con.length
+# To check if all 100 santas were printed
+p santa_con.length
 
 
 
