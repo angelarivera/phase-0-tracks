@@ -27,21 +27,20 @@ class Game
 	def initialize(secret_word)
 		@secret_word = secret_word
 		@guess_count = 0
-		@guesses = []
+		p @guesses = []
 		@placeholder = "_"
 	end
 
-	def placeholder_feedback
-		placeholder = @secret_array
-		# How do i get placeholder to display the given length of the secret word with underscores?
-	end
+	# def placeholder_feedback
+	# 	placeholder = @secret_array
+	# 	# How do i get placeholder to display the given length of the secret word with underscores?
+	# end
 
-	def correct_guess(letter_guess)
-		if @secret_array.include? letter_guess
-			@good_letter_guesses << letter_guess
-			@placeholder << # Do I update the placeholder with the correctly guessed letter in this correct guess method or is this done in the placeholder_feedback instance method?
-		end
-	end
+	# def correct_guess(letter_guess)
+	# 	if @secret_array.include? letter_guess
+	# 		@good_letter_guesses << letter_guess
+	# 		@placeholder << # Do I update the placeholder with the correctly guessed letter in this correct guess method or is this done in the placeholder_feedback instance method?
+	# end
 end
 
 
@@ -53,6 +52,6 @@ secret_word = gets.chomp
 
 puts new_game.placeholder_feedback
 puts "What letter do you want to guess?"
-letter_guess = gets.chomp
+guesses = gets.chomp
 
 
