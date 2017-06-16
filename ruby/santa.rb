@@ -13,8 +13,8 @@ class Santa
 	# end
 
 	attr_accessor :gender
-	# def ethnicity= (new_ethnicity)
-	# 	@ethnicity = new_ethnicity
+	# def gender= (new_gender)
+	# 	@gender = new_gender
 	# end
 
 	def initialize (gender, ethnicity)
@@ -43,14 +43,20 @@ class Santa
 
 	def get_mad_at (reindeer_name)
 		# get index number of given name
-		reindeer_ranking[reindeer_name]
+		@reindeer_ranking[reindeer_name.to_i]
 		# delete the reindeer that was in that given index number
-		reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking.delete(reindeer_name)
 		# re-add reindeer you deleted back at to the array
-		reindeer_ranking << reindeer_name
+		@reindeer_ranking << reindeer_name
 	end
 end 
 
+# D R I V E R   C O D E
+puts newsanta = Santa.new("female", "Latinx")
+puts newsanta.speak 
+puts newsanta.eat_milk_and_cookies("Oatmeal Rasin Cookie")
+puts newsanta.celebrate_birthday(26)
+puts newsanta.get_mad_at("Rudolph")
 
 
 
@@ -69,6 +75,8 @@ ethnicity_options = ["African American", "Latinx", "Caucasian", "Asian", "Native
 gender_options.length.times do |index|
 	santas << Santa.new(gender_options[index], ethnicity_options[index])
 end
+
+p santas
 
 
 santa_con = []
