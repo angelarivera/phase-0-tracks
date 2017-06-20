@@ -87,20 +87,20 @@ end
 
 # Set a limit of user guesses based off the length of the word
 # While (guesses is less than max guesses) user hasn't reached guess count
-	# Display to user two the hidden word they need to guess "_ _ _ _ _" 
-	# How do you generate that hidden word...
-	# Ask user two to guess a letter (z)
-	# Assign guessed letter a variable
-	# If guessed letter == a letter in the word array
-		# Find the index of the correct letter in the first variable
-		# Take that number and then finding that same index in the second variable array 
-		# Once I find that index, I want to replace the index with the letter
-		# Replace the letter with the index
-		# Puts SECOND VARIABLE with correct letter they guessed "_ _ z z _"
-		# And update the game_status with the correct letter guessed "_ _ z z _"
-		# And update the displayed word the user sees
-	# Else add to the guess count
-	# Put "incorrect guess, guess again"
+# 	Display to user two the hidden word they need to guess "_ _ _ _ _" 
+# 	How do you generate that hidden word...
+# 	Ask user two to guess a letter (z)
+# 	Assign guessed letter a variable
+# 	If guessed letter == a letter in the word array
+# 		Find the index of the correct letter in the first variable
+# 		Take that number and then finding that same index in the second variable array 
+# 		Once I find that index, I want to replace the index with the letter
+# 		Replace the letter with the index
+# 		Puts SECOND VARIABLE with correct letter they guessed "_ _ z z _"
+# 		And update the game_status with the correct letter guessed "_ _ z z _"
+# 		And update the displayed word the user sees
+# 	Else add to the guess count
+# 	Put "incorrect guess, guess again"
 
 
 
@@ -108,13 +108,13 @@ end
 
 
 
-	# And ask them to guess again
-	# Loop over through the process again
-	# Break if user spells out "p i z z a"
+# 	And ask them to guess again
+# 	Loop over through the process again
+# 	Break if user spells out "p i z z a"
 	
 
 # If user two makes incorrect guess, add to the guess count
 # Elsif the guess is repeated (guesses "b" twice), do not count towards the guess count
 # Elsif the guess is correct, do not count towards the guess count
 # If user two reaches the end of the guess count
-	# Puts "Sorry you lost!"
+# 	Puts "Sorry you lost!"
