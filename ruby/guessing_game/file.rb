@@ -2,28 +2,28 @@
 # Ask user for secret word
 # Set the max number of guesses to the length of the secret word
 # Save secret word to a variable 
-#! Create a placeholder array that is made up of underscores that equal the length of secret word array.
-# Create an array to guesses
+# Create a placeholder array that is made up of underscores that equal the length of secret word array.
+# Create an array of guesses (keep track of all guesses that the user makes)
 # Show the user the placeholder array
 # Ask second user to guess a letter
 # Check what the guessed letter triggers
+
+# Method #1) to see where that letter exists, and does different things based off where it finds it.
 # If guessed letter is in the secret_word_array
-	# update the placeholder
-# If guessed letter is not in the secret_word_array && in the bad_letter_guesses array
+	# update the placeholder with that letter
+# If guessed letter is not in the secret_word_array && is already in the guesses array
 	# don't add one to the guess_count
-# If guessed letter is not in the secret_word_array
-	# update the bad_letter_guesses
+# If guessed letter is not in the secret_word_array && not already in the guesses array
+	# update the guesses array with the guessed letter 
 	# add one to the count the guess count
-# Break if placeholder is == secret_word_array
-	# puts "You win" || 
+
+# Method #2) checks winning and losing conditions
+# Break if placeholder != include?(_)
+	# puts "You win" 
 # Break if guess count has reached the number of the secret word.length 
 	# puts message of "You lose"
 
-	# One user can enter a word (or phrase, if you would like your game to support that), and another user attempts to guess the word.
-# Guesses are limited, and the number of guesses available is related to the length of the word.
-# Repeated guesses do not count against the user.
-# The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
-# The user should get a congratulatory message if they win, and a taunting message if they lose.
+# * single responsibility principle -> each method should have one responsbility
 
 class Game
 
@@ -50,27 +50,27 @@ class Game
 		if guesses_remaining == 0 
 			puts "Game over"
 		elsif placeholder == secret_word
+
 	end
 
 
 
+	secret_word.chars.each_with_index | characters, indx |
+	if secret_word.include?(guess)
 
+	def placeholder_feedback
+		placeholder = @secret_array
+		# How do i get placeholder to display the given length of the secret word with underscores?
+	end
 
-	# secret_word.chars.each_with_index | characters, indx |
-	# if secret_word.include?(guess)
-
-	# def placeholder_feedback
-	# 	placeholder = @secret_array
-	# 	# How do i get placeholder to display the given length of the secret word with underscores?
-	# end
-
-	# def correct_guess(letter_guess)
-	# 	if @secret_array.include? letter_guess
-	# 		@good_letter_guesses << letter_guess
-	# 		@placeholder << # Do I update the placeholder with the correctly guessed letter in this correct guess method or is this done in the placeholder_feedback instance method?
-	# end
+	def correct_guess(letter_guess)
+		if @secret_array.include? letter_guess
+			@good_letter_guesses << letter_guess
+			@placeholder << # Do I update the placeholder with the correctly guessed letter in this correct guess method or is this done in the placeholder_feedback instance method?
+	end
 end
 
+# USER INTERFACE
 
 puts new_game = Game.new("win")
 
