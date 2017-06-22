@@ -4,7 +4,7 @@
 
 // const wordsArr = args.slice(2, args.length);
 
-const wordsArr = ['are', 'hello', 'longest'];
+const wordsArr = ['are', 'longest', 'hello'];
 
 const sortWords = function(x,y) {
 	return (x.length < y.length);
@@ -15,6 +15,8 @@ const wordSorter = function(words) {
 }
 
 const sortedArray = wordSorter(wordsArr);
+
+// Try to refactor for one function! If you have time! 
 
 // Write a function that takes two objects and checks to see if the objects share at least one key-value pair.
 
