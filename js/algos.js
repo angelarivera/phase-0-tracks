@@ -1,8 +1,4 @@
-// R E L E A S E   O N E ,  T W O 
-
-// const args = process.argv;
-
-// const wordsArr = args.slice(2, args.length);
+// R E L E A S E   Z E R O 
 
 const wordsArr = ['are', 'longest', 'hello'];
 
@@ -16,38 +12,44 @@ const wordSorter = function(words) {
 
 const sortedArray = wordSorter(wordsArr);
 
-// Try to refactor for one function! If you have time! 
 
-// Write a function that takes two objects and checks to see if the objects share at least one key-value pair.
+/* R E L E A S E   O N E 
+Write a function that takes two objects and checks to see if the objects share at least one key-value pair. Will return either true or false. 
+*/
 
-// Here are some sample objects and their expected return values:
-
-// Driver code that tests function on array
-
-// yourFunction({name: "Steven", age: 54}, {name: "Tamir", age: 54}); #  true
-// yourFunction({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); #  true
-// These both return true because at least one key-value pair matches between the two objects.
-// If no pairs match (and keep in mind that the two objects may not even have any of the same keys), the function should return false. To make your life easier, don't worry about whether a property is a string ('age') or an identifier name (age). Those can be considered equivalent. 
-
-// --
-
-// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. 
-
-// So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). 
-
-// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
-
-// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
-
-// forEach ((array) => {
-
-// }
-
-// while (i = 0, i < array.length, i++){
-	
-// }
+var foo = { 'alpha' : 'puffin', 'beta' : 'beagle' };
+var keys = Object.keys(foo); // ['alpha', 'beta'] 
+// (or maybe some other order, keys are unordered).
 
 
-// D R I V E R   C O D E 
+var objectOne = {
+	name: "Steven",
+	age: 40
+}
+
+var objectTwo = {
+	name: "Julia",
+	age: 40
+}
+
+const checkMatch = function(objectOne, objectTwo) {
+	console.log(keys = Object.keys(objectOne));
+	console.log(values = keys.map(function(v){return objectOne[v];}))
+	console.log(keys2 = Object.keys(objectTwo));
+	console.log(values2 = keys.map(function(v){return objectTwo[v];}))
+	// console.log(values = Object.values(objectOne));
+}
+
+console.log(checkMatch(objectOne, objectTwo));
+
+
+/* D R I V E R   C O D E 
+
+For Release One
 console.log(sortedArray);
+*/
+
+
+
+
 
