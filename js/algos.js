@@ -46,13 +46,42 @@ const checkMatch = function(objectOne, objectTwo) {
 console.log(checkMatch(objectOne, objectTwo));
 
 /* R E L E A S E   T W O 
-Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+Write a function that takes an integer (for length) 
+And builds + returns an array of strings of varying lengths (based on the integer)
+- Range for letters in string = 1..10
 
-Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+example: console.log(randomStrings(3));
+			=> [nnnnfph, opwe, lvknwjckdm]
 */ 
 
+// const randomString = function(integer) {
+// 	var string_length = integer
+// 	var randomstring = []
+// 	for (var i=0; i<string_length; i++){
+// 		var r
+// 	}
+// }
+
+// console.log(randomString(3));
 
 
+function randomStringGenerator(length)
+{
+    var randomArray = []
+
+    var text = " ";
+    
+    var charset = "abcdefghijklmnopqrstuvwxyz0123456789";
+    
+    for( var i=0; i < length; i++ )
+        text += charset.charAt(Math.floor(Math.random() * charset.length));
+    
+    return text;
+    console.log(randomArray.push(text));
+}
+
+console.log(randomStringGenerator(5));
+// returns "gklzg"
 
 
 
