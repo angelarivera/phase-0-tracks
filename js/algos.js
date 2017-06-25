@@ -63,16 +63,13 @@ console.log(randomString(9));
 
 function randomStringGenerator(length)
 {
-    // var randomArray = []
-
-    var text = "";
+    var  letters = "";
     
-    var charset = "abcdefghijklmnopqrstuvwxyz";
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
     
-    for( var i=0; i < length; i++ )
-        text += charset.charAt(Math.floor(Math.random() * charset.length));
-    
-    return text;
+    for(var i=0; i < length; i++)
+        letters += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    return letters;
 }
 
 
