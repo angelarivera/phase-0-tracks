@@ -14,36 +14,32 @@ const sortedArray = wordSorter(wordsArr);
 
 console.log(sortedArray);
 
-
 /* R E L E A S E   O N E 
 Write a function that takes two objects and checks to see if the objects share at least one key-value pair. Will return either true or false. 
 */
 
 // var objectOne = {
-// 	name: "Steven",
-// 	age: 40
+// name: "Steven",
+// age: 40
 // }
 
 // var objectTwo = {
-// 	name: "Steven",
-// 	race: "Latino"
+// name: "Steven",
+// race: "Latino"
 // }
 
 // const checkMatch = function(objectOne, objectTwo) {
-// 	// console.log(keys = Object.keys(objectOne));
-// 	// console.log(values = keys.map(function(v){return objectOne[v];}))
-// 	// console.log(keys2 = Object.keys(objectTwo));
-// 	// console.log(values2 = keys.map(function(v){return objectTwo[v];}))
 
-// 	for (key in objectOne) {
-// 		if (objectTwo.hasOwnProperty(key)){
-// 			console.log(key in objectTwo);
-// 		}
-// 	}
-// 	// console.log(values = Object.values(objectOne));
+// for (key in objectOne) {
+// if (objectTwo.hasOwnProperty(key)){
+// console.log(key in objectTwo);
+// }
+// }
 // }
 
 // console.log(checkMatch(objectOne, objectTwo));
+
+
 
 // R E L E A S E   T W O 
 
@@ -67,9 +63,9 @@ console.log(randomString(9));
 
 function randomStringGenerator(length)
 {
-    var randomArray = []
+    // var randomArray = []
 
-    var text = " ";
+    var text = "";
     
     var charset = "abcdefghijklmnopqrstuvwxyz";
     
@@ -84,9 +80,18 @@ function randomStringGenerator(length)
 Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
 */
 
-for ()
+const  combineFunctions = function() {
+	var count = 10
+	var randomArray = []
+	
+	for (i=0; i < count; i++){
+	randomArray = randomString(2);
+	console.log(randomArray);
+	console.log(wordSorter(randomArray));
+	}
+}
 
-
+console.log(combineFunctions());
 
 
 
