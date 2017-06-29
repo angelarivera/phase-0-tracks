@@ -1,0 +1,127 @@
+R  E  L  E  A  S  E   T  W  O  
+
+Display the information in one table (either table is fine).
+
+	sqlite> SELECT * FROM students;
+		1|Carmen Rivera|11|true|2
+		2|Christina Correa|11|true|2
+		3|Greggory Smith|8|true|1
+		4|Xavier Torres|10|false|3
+		5|Ivette Johnson|14|faalse|3
+		6|Jacob Brown|10|true|3
+		7|Juan Lopez|10|true|3
+		8|Kayla Rodriguez|8|true|2
+		9|Christina Martinez|8|true|1
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+	UPDATE students SET enrolled="false" WHERE name="Kayla Rodriguez";
+	SELECT * FROM students WHERE name="Kayla Rodriguez";
+		8|Kayla Rodriguez|8|false|2
+
+
+Display the information in both tables using one query.
+
+	SELECT * FROM groups, students WHERE students.group_id = groups.id;
+		2|Ducklings|1|Carmen Rivera|11|true|2
+		2|Ducklings|2|Christina Correa|11|true|2
+		1|Ladybugs|3|Greggory Smith|8|true|1
+		3|Ants|4|Xavier Torres|10|false|3
+		3|Ants|6|Jacob Brown|10|true|3
+		3|Ants|7|Juan Lopez|10|true|3
+		2|Ducklings|8|Kayla Rodriguez|8|false|2
+		1|Ladybugs|9|Christina Martinez|8|true|1
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+	SELECT students.name, groups.name, students.enrolled FROM students JOIN groups ON students.group_id = groups.id;
+		Carmen Rivera|Ducklings|true
+		Christina Correa|Ducklings|true
+		Greggory Smith|Ladybugs|true
+		Xavier Torres|Ants|false
+		Jacob Brown|Ants|true
+		Juan Lopez|Ants|true
+		Kayla Rodriguez|Ducklings|false
+		Christina Martinez|Ladybugs|true
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+	DELETE FROM students WHERE name="Ivette Johnson";
+	SELECT * FROM students;
+		1|Carmen Rivera|11|true|2
+		2|Christina Correa|11|true|2
+		3|Greggory Smith|8|true|1
+		4|Xavier Torres|10|false|3
+		6|Jacob Brown|10|true|3
+		7|Juan Lopez|10|true|3
+		8|Kayla Rodriguez|8|false|2
+		9|Christina Martinez|8|true|1
+
+
+R  E  L  E  A  S  E   T  H  R  E  E 
+
+INSERT INTO students (name, age, enrolled) VALUES ("Michael Jordan", 23, "false");
+* Newest student has no group_id
+
+Left Outer Join:
+	SELECT 
+	   ...> students.name,
+	   ...> groups.name 
+	   ...> FROM students
+	   ...> LEFT JOIN groups ON students.group_id = groups.id;
+	   		Carmen Rivera|Ducklings
+			Christina Correa|Ducklings
+			Greggory Smith|Ladybugs
+			Xavier Torres|Ants
+			Jacob Brown|Ants
+			Juan Lopez|Ants
+			Kayla Rodriguez|Ducklings
+			Christina Martinez|Ladybugs
+			Michael Jordan|
+
+	* Michael Jordan was still returned even with no group_id
+
+Cross Join: 
+	SELECT students.name,
+   ...> groups.name
+   ...> FROM students
+   ...> CROSS JOIN groups;
+   		Carmen Rivera|Ladybugs
+	Carmen Rivera|Ducklings
+	Carmen Rivera|Ants
+	Christina Correa|Ladybugs
+	Christina Correa|Ducklings
+	Christina Correa|Ants
+	Greggory Smith|Ladybugs
+	Greggory Smith|Ducklings
+	Greggory Smith|Ants
+	Xavier Torres|Ladybugs
+	Xavier Torres|Ducklings
+	Xavier Torres|Ants
+	Jacob Brown|Ladybugs
+	Jacob Brown|Ducklings
+	Jacob Brown|Ants
+	Juan Lopez|Ladybugs
+	Juan Lopez|Ducklings
+	Juan Lopez|Ants
+	Kayla Rodriguez|Ladybugs
+	Kayla Rodriguez|Ducklings
+	Kayla Rodriguez|Ants
+	Christina Martinez|Ladybugs
+	Christina Martinez|Ducklings
+	Christina Martinez|Ants
+	Michael Jordan|Ladybugs
+	Michael Jordan|Ducklings
+	Michael Jordan|Ants
+
+	* Cross Join displays the number of rows in the first table (students) multiplied by the number of rows in the second table (groups). This cross join has no WHERE clause, so it is a cartesian product. Cartesian products are the results of two sets - it gives all ordered pairs (x,y) for which x belongs to y. 
+
+
+
+
+
+
+
+
+
+
