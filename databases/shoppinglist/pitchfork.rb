@@ -144,13 +144,13 @@ puts "Pitchfork Music Festival 2017: Friend Locator"
 puts 
 puts "Find friends, concert times, and stage locations for Pitchfork's 12th Annual Music Festival in Chicago's Union Park"
 loop do 
-puts "Search a performer to discover friends attending. Type 'done' when finished."
-performers_id = gets.chomp
-find_attendees(performers_id)
+	puts "Search a performer to discover friends attending. Type 'done' when finished."
 
-break if performers_id == "done"
+	performers_id = gets.chomp
+
+	break if performers_id == 'done'
+
+	find_attendees(performers_id)
 end 
-
-# find_attendees("Madame Gandhi", 1)
 
 
