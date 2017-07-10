@@ -35,9 +35,17 @@ $DATABASE.execute(create_performer_table)
 
 
 # add friend method
-# def add_friend(name, performer_id)
-# 	$DATABASE.execute("INSERT INTO user (name, performer_id) VALUES (?, ?)", [name, performer_id])
-# end 
+def add_friend(name, performer_id)
+	$DATABASE.execute("INSERT INTO user(name, performer_id) VALUES (?, ?)", [name, performer_id])
+end 
+
+def delete_friend(name)
+	$DATABASE.execute("DELETE FROM user WHERE name=(?)", [name])
+end 
+
+def update_friend(performer_id, name)
+	
+end
 
 # retrive data with ORM
 def find_attendees (performers_id)
@@ -143,6 +151,39 @@ end
 puts "Pitchfork Music Festival 2017: Friend Locator"
 puts 
 puts "Find friends, concert times, and stage locations for Pitchfork's 12th Annual Music Festival in Chicago's Union Park"
+puts 
+
+loop do 
+	puts "Add friends to your Friend Locator list. Type 'done' to begin locating friends."
+	puts
+	puts "What is your friends name?"
+
+	name = gets.chomp
+
+	break if name == 'done'
+	
+	puts "Below is the setlist, select the number for the performer your friend will be attending:"
+	puts 
+	puts "Madame Gandhi : 1"
+	puts "Priests : 2"
+	puts "Dawn Richard : 3"
+	puts "Hiss Golden Messenger : 4"
+	puts "Vince Staples : 5"
+	puts "William Tyler : 6"
+	puts "Thurston Moore Group : 7"
+	puts "Frankie Cosmos : 8"
+	puts "Danny Brown : 9"
+	puts "Kamaiyah : 10"
+	puts "Dirty Projectors : 11"
+	puts "Arca & Jesse Kanda : 12"
+	puts "LCD Soundsystem : 13"
+
+	performers_id = gets.chomp.to_i
+
+	add_friend(name, performers_id)
+end
+
+
 loop do 
 	puts "Search a performer to discover friends attending. Type 'done' when finished."
 
@@ -153,4 +194,12 @@ loop do
 	find_attendees(performers_id)
 end 
 
+loop do
+	puts "Do you want to delete any friends from Friend Locator? Type 'done' when finished"
+	name = gets.chomp
+
+	break if name == 'done'
+
+	delete_friend(name)
+end 
 
