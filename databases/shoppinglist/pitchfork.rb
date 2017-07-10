@@ -44,7 +44,7 @@ def delete_friend(name)
 end 
 
 def update_friend(performer_id, name)
-	
+	$DATABASE.execute("UPDATE user SET performer_id=(?) WHERE name=(?)", [performer_id, name])
 end
 
 # retrive data with ORM
@@ -192,6 +192,36 @@ loop do
 	break if performers_id == 'done'
 
 	find_attendees(performers_id)
+end 
+
+loop do 
+	puts "Do you want to update any friends location? Type in their name or type 'done' when finished"
+	puts 
+	puts "What is your friends name?"
+	
+	name = gets.chomp
+
+	break if name == 'done'
+
+	puts "Below is the setlist, select the number for the performer your friend will now be attending:"
+	puts 
+	puts "Madame Gandhi : 1"
+	puts "Priests : 2"
+	puts "Dawn Richard : 3"
+	puts "Hiss Golden Messenger : 4"
+	puts "Vince Staples : 5"
+	puts "William Tyler : 6"
+	puts "Thurston Moore Group : 7"
+	puts "Frankie Cosmos : 8"
+	puts "Danny Brown : 9"
+	puts "Kamaiyah : 10"
+	puts "Dirty Projectors : 11"
+	puts "Arca & Jesse Kanda : 12"
+	puts "LCD Soundsystem : 13"
+
+	performer_id = gets.chomp.to_i
+
+	update_friend(performer_id, name)
 end 
 
 loop do
