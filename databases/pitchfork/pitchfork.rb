@@ -153,6 +153,7 @@ puts
 puts "Find friends, concert times, and stage locations for Pitchfork's 12th Annual Music Festival in Chicago's Union Park"
 puts 
 
+while
 loop do 
 	puts "Add friends to your Friend Locator list. Type 'done' to begin locating friends."
 	puts
