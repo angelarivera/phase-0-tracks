@@ -1,0 +1,5 @@
+1. What are some of the key design philosophies of the Linux operating system?
+
+One of the key design philosophies is that Linux is an operating system that values concise and simple commands. For example, the sort command does only one thing, it sorts. It can perform a myriad of sorts such as numeric, alphabetic, and alphanumeric sorts (forward or backwards), but at its core, it sorts. Another design philosopy is the notion to use software leverage. In using command line commands alone, you are taking advantage of thousands of lines of "C" code that has already been created, all to accomplish your task. This follows the idea that programmers should never rewrite code that has already been written.
+
+2. In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
