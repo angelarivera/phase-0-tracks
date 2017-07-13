@@ -25,3 +25,20 @@ post '/students' do
 end
 
 # add static resources
+
+# R E L E A S E   0 
+
+get '/students/sf' do
+  @students = db.execute("SELECT * FROM students WHERE campus = 'SF'")
+  erb :sf_student
+end
+
+get '/campuses/new' do
+  erb :campuses
+end
+
+post '/campuses' do
+  db.execute("INSERT INTO campuses (name) VALUES (?)", params['name'])
+  redirect '/'	
+end 
+
